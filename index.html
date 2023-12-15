@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Card</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+      background-image: url('bg1.jpg'); /* Replace with your image file */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 100vh; /* Ensure full viewport height */
+    }
+
+    #card {
+      background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better readability */
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    #message {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    #surpriseText {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: #e44d26; /* Red color for emphasis */
+    }
+
+    #surpriseImage {
+      display: none; /* Initially hide the surprise image */
+      margin-top: 20px;
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    #viewSurpriseBtn {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="card">
+  <p id="message">Hello,<br> Wishing you a season filled with joy, laughter, and unforgettable moments. Thank you for your hard work and dedication throughout the year.</p>
+  <p id="surpriseText">🎁 Surprise: You've received a special gift! 🎉</p>
+  <img id="surpriseImage" src="bg2.jpg" alt="Surprise Image">
+  <button id="viewSurpriseBtn" onclick="revealSurprise()">View Surprise</button>
+</div>
+
+<script>
+  function revealSurprise() {
+    var surpriseText = document.getElementById("surpriseText");
+    var surpriseImage = document.getElementById("surpriseImage");
+    var viewSurpriseBtn = document.getElementById("viewSurpriseBtn");
+
+    // Toggle visibility of text and image
+    surpriseText.style.display = "none";
+    surpriseImage.style.display = "block";
+
+    // Hide the button after revealing the surprise
+    viewSurpriseBtn.style.display = "none";
+  }
+</script>
+
+</body>
+</html>
